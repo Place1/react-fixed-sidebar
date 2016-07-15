@@ -1,13 +1,14 @@
-$sidebar-width: 200px;
 $sidebar-background: rgb(124, 165, 194);
 
 .sidebar {
 	height: 100vh;
-	width: $sidebar-width;
+	// the width of the sidebar is controlled inside react
 	background-color: $sidebar-background;
 	position: fixed;
 	top: 0;
 	left: 0;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+	z-index: 100;
 
 	&__touchbox {
 		width: 100vw;
@@ -15,5 +16,17 @@ $sidebar-background: rgb(124, 165, 194);
 		position: fixed;
 		top: 0;
 		left: 0;
+		z-index: -100;
+	}
+
+	&--active {
+	}
+
+	&--opening {
+		transition: left 300ms ease-in;
+	}
+
+	&--closing {
+		transition: left 300ms ease-in;
 	}
 }
