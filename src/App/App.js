@@ -27,7 +27,10 @@ class App extends React.Component {
 					<button onClick={this.closeNav}>close</button>
 					<button onClick={this.toggleNav}>toggle</button>
 				</div>
-				<SideBar ref={x => this.sidebar = x} />
+				<SideBar
+					ref={x => this.sidebar = x}
+					noPartial={true}
+				/>
 				<h1>hello world</h1>
 			</div>
 		);

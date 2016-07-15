@@ -26,11 +26,15 @@ class SideBar extends React.Component {
 	static propTypes = {
 		width: PropTypes.number,
 		children: PropTypes.node,
+		noPartial: PropTypes.bool,
+		className: PropTypes.string,
 	}
 
 	static defaultProps = {
 		width: 200,
 		children: null,
+		noPartial: false,
+		className: '',
 	}
 
 	constructor(props) {
@@ -72,6 +76,17 @@ class SideBar extends React.Component {
 		if (event.isFinal) {
 			this.lastDelta = 0
 			activeClass = ''
+			// handle partial open/close on touch finish
+			if (this.props.noPartial) {
+				if (xPos < -this.props.width/2) {
+					// should close
+					setTimeout(this.close, 0)
+				}
+				else {
+					// should open
+					setTimeout(this.open, 0)
+				}
+			}
 		}
 		else {
 			this.lastDelta = event.deltaX
@@ -119,7 +134,7 @@ class SideBar extends React.Component {
 			<div>
 				<div
 					style={this.style}
-					className={`sidebar ${this.state.activeClass}`}
+					className={`sidebar ${this.props.className} ${this.state.activeClass}`}
 					ref={x => this.sidebar = x}
 				>
 					{this.props.children}

@@ -1,4 +1,4 @@
-$sidebar-background: rgb(124, 165, 194);
+$sidebar-background: white;
 
 .sidebar {
 	height: 100vh;
@@ -23,10 +23,10 @@ $sidebar-background: rgb(124, 165, 194);
 	}
 
 	&--opening {
-		transition: left 300ms ease-in;
+		transition: left 200ms ease-out;
 	}
 
 	&--closing {
-		transition: left 300ms ease-in;
+		transition: left 200ms ease-out;
 	}
 }
