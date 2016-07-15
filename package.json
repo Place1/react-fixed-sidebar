@@ -1,7 +1,7 @@
 {
-  "name": "react_js_boilerplate",
+  "name": "react-fixed-sidebar",
   "version": "1.0.0",
-  "description": "react_js_boilerplate",
+  "description": "A fixed sidebar for react apps including support for mobile touch to open/close",
   "main": "index.js",
   "scripts": {
     "start": "npm run serve:hot",
