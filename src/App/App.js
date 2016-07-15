@@ -29,7 +29,7 @@ class App extends React.Component {
 				</div>
 				<SideBar
 					ref={x => this.sidebar = x}
-					noPartial={true}
+					allowPartial={false}
 				/>
 				<h1>hello world</h1>
 			</div>

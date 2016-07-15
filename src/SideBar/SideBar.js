@@ -8,10 +8,7 @@ function setupHammer(elements) {
 	const touchManager = new HammerAdapter(elements)
 	const swipeActionToggle = new Hammer.Pan({
 		event: 'toggle',
-		pointers: 1,
-		threshold: 10,
 		direction: Hammer.DIRECTION_HORIZONTAL,
-		velocity: 0.3
 	})
 	touchManager.add(swipeActionToggle)
 	return touchManager
@@ -26,14 +23,14 @@ class SideBar extends React.Component {
 	static propTypes = {
 		width: PropTypes.number,
 		children: PropTypes.node,
-		noPartial: PropTypes.bool,
+		allowPartial: PropTypes.bool,
 		className: PropTypes.string,
 	}
 
 	static defaultProps = {
 		width: 200,
 		children: null,
-		noPartial: false,
+		allowPartial: false,
 		className: '',
 	}
 
@@ -77,7 +74,7 @@ class SideBar extends React.Component {
 			this.lastDelta = 0
 			activeClass = ''
 			// handle partial open/close on touch finish
-			if (this.props.noPartial) {
+			if (!this.props.allowPartial) {
 				if (xPos < -this.props.width/2) {
 					// should close
 					setTimeout(this.close, 0)
