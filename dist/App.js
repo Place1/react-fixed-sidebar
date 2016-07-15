@@ -21160,6 +21160,23 @@
 					'div',
 					{ className: 'app' },
 					_react2.default.createElement(
+						'p',
+						{ className: 'app__text' },
+						'Try swiping left and right!'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'app__text app__text--mobile-only' },
+						'Try it on mobile as well!'
+					),
+					_react2.default.createElement(_SideBar2.default, {
+						ref: function ref(x) {
+							return _this2.sidebar = x;
+						},
+						allowPartial: false,
+						className: 'app__sidebar'
+					}),
+					_react2.default.createElement(
 						'div',
 						{ className: 'app__buttons' },
 						_react2.default.createElement(
@@ -21177,14 +21194,7 @@
 							{ onClick: this.toggleNav },
 							'toggle'
 						)
-					),
-					_react2.default.createElement(_SideBar2.default, {
-						ref: function ref(x) {
-							return _this2.sidebar = x;
-						},
-						allowPartial: false,
-						className: 'app__sidebar'
-					})
+					)
 				);
 			}
 		}]);
@@ -24484,7 +24494,7 @@
 
 
 	// module
-	exports.push([module.id, ".app__sidebar {\n  background-color: #414141; }\n\n.app__buttons {\n  float: right; }\n  .app__buttons button {\n    display: block;\n    margin: 20px 5px;\n    width: 70px;\n    height: 40px;\n    font-size: 16px;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    background-color: #93eb9e;\n    border: none;\n    outline: none; }\n", ""]);
+	exports.push([module.id, ".app__sidebar {\n  background-color: #414141; }\n\n.app__buttons {\n  float: right; }\n  .app__buttons button {\n    display: block;\n    margin: 20px 5px;\n    width: 70px;\n    height: 40px;\n    font-size: 16px;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);\n    background-color: #93eb9e;\n    border: none;\n    outline: none; }\n\n.app__text {\n  text-align: center; }\n  .app__text--mobile-only {\n    display: none; }\n    @media screen and (min-width: 700px) {\n      .app__text--mobile-only {\n        display: block; } }\n", ""]);
 
 	// exports
 
