@@ -21,9 +21,17 @@ function cleanupHammer(selector) {
 class SideBar extends React.Component {
 
 	static propTypes = {
+		// the width of the sidebar (px)
 		width: PropTypes.number,
+
+		// react children to be rendered inside the sidebar
 		children: PropTypes.node,
+
+		// defaults to false. If true, the sidebar will
+		// not snap to open/closed when partially dragged
 		allowPartial: PropTypes.bool,
+
+		// will be added to the sidebar element for styling
 		className: PropTypes.string,
 	}
 
