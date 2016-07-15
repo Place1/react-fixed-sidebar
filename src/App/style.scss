@@ -19,4 +19,17 @@
 			outline: none;
 		}
 	}
+
+	&__text {
+		
+		text-align: center;
+
+		&--mobile-only {
+			display: none;
+
+			@media screen and (min-width: 700px) {
+				display: block;
+			}
+		}
+	}
 }
