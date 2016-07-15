@@ -2,7 +2,7 @@
 
 A simple fixed side bar react component that supports touch gestures on mobile to open/close.
 
-Demo: http://place1.github.com/react-fixed-sidebar
+Demo: https://place1.github.io/react-fixed-sidebar/
 
 ## Usage:
 
