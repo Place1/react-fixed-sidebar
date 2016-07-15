@@ -1,5 +1,9 @@
 # React Fixed Side Bar
 
+A simple fixed side bar react component that supports touch gestures on mobile to open/close.
+
+Demo: http://place1.github.com/react-fixed-sidebar
+
 ## Usage:
 
 ### Example:
@@ -88,4 +92,6 @@ To build the lib directory, i.e. the component ready for distribution...
 	# will build ./lib/SideBar.js
 
 ## License:
-MIT License. See the LICENSE file.
+MIT License.
+
+See the LICENSE file.

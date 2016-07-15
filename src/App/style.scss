@@ -1,12 +1,22 @@
 .app {
+
+	&__sidebar {
+		background-color: rgb(65, 65, 65);
+	}
+
 	&__buttons {
 		float: right;
 
 		button {
 			display: block;
 			margin: 20px 5px;
-			width: 52px;
+			width: 70px;
+			height: 40px;
+			font-size: 16px;
 			box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+			background-color: rgb(147, 235, 158);
+			border: none;
+			outline: none;
 		}
 	}
 }
