@@ -18,6 +18,14 @@ class HammerAdapter {
 	on(event, callback) {
 		this.items.forEach(item => item.on(event, callback));
 	}
+
+	off(event, callback) {
+		this.items.forEach(item => item.off(event, callback));
+	}
+
+	destroy() {
+		this.items.forEach(item => item.destroy());
+	}
 }
 
 export default HammerAdapter;

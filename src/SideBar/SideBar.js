@@ -14,10 +14,6 @@ function setupHammer(elements) {
 	return touchManager
 }
 
-function cleanupHammer(selector) {
- // not sure what to do here yet.
-}
-
 class SideBar extends React.Component {
 
 	static propTypes = {
@@ -59,8 +55,8 @@ class SideBar extends React.Component {
 	}
 
 	componentWillUnmount() {
-		// this.touchManager.removeListener('toggle', this.toggle) // might actually be '.off()'
-		// cleanupHammer('.sidebar__touchbox')
+		this.touchManager.off('toggle', this.handleTouch)
+		this.touchManager.destroy()
 	}
 
 	handleTouch = event => {
