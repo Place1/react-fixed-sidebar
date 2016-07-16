@@ -1,6 +1,6 @@
 {
   "name": "react-fixed-sidebar",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A fixed sidebar for react apps including support for mobile touch to open/close",
   "main": "index.js",
   "scripts": {
